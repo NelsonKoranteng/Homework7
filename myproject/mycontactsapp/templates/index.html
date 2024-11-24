@@ -13,10 +13,6 @@
         {% for contact in contacts %}
         <div class="card">
             <div class="top">
-                <div class="circle-img">
-                    <!-- Example Placeholder Image -->
-                    <img src="{% static 'images/default-profile.jpg' %}" alt="Profile Image">
-                </div>
                 <div class="name">{{ contact.first_name }} {{ contact.last_name }}</div>
             </div>
             <div class="info">{{ contact.email }}</div>
