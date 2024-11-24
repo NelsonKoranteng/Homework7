@@ -1,0 +1,27 @@
+{% load static %} <!-- Load static tag -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact List</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> <!-- Correct static tag syntax -->
+</head>
+<body>
+    <h1 class="heading">My Contacts</h1>
+    <div class="card-container">
+        {% for contact in contacts %}
+        <div class="card">
+            <div class="top">
+                <div class="circle-img">
+                    <!-- Example Placeholder Image -->
+                    <img src="{% static 'images/default-profile.jpg' %}" alt="Profile Image">
+                </div>
+                <div class="name">{{ contact.first_name }} {{ contact.last_name }}</div>
+            </div>
+            <div class="info">{{ contact.email }}</div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
